@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1401993800 source:c:\users\kevin\documents\github\game\src\vec3f.cpp
+	<math.h>
+	"Vec3f.h"
+
+1401993842 c:\users\kevin\documents\github\game\include\vec3f.h
+	<iostream>
+
