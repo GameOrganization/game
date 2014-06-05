@@ -1,2 +1,3 @@
 List game ideas here:
 1. top down turn based strategy game with synchronized actions
+2. legends of grimrock style first person puzzle/adventure
