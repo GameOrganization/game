@@ -19,3 +19,16 @@
 	<math.h>
 	"Vec3f.h"
 
+1401998973 source:/Users/amascioli/Documents/game/src/main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"Vec3f.h"
+
+1401998973 /Users/amascioli/Documents/game/include/Vec3f.h
+	<iostream>
+
+1401998973 source:/Users/amascioli/Documents/game/src/Vec3f.cpp
+	<math.h>
+	"Vec3f.h"
+
