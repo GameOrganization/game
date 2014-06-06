@@ -1,3 +1,12 @@
 List game ideas here:
 1. top down turn based strategy game with synchronized actions
+	-similar to xcom, but you give each unit orders every turn and they all execute simultaneously as opposed to one at a time
 2. legends of grimrock style first person puzzle/adventure
+3. roguelike rpg puzzle-y first person, could have similar elements to grimrock
+	-random dungeons are created with certain puzzles built in that must be solved before progression
+	-random loot found in chests, loot and xp from enemies, could add more things like shops and smiths etc
+4. hex grid version of ice puzzle
+	-this could be made for mobile phones or something
+	-could be rendered in 3d for the e-peen
+5. sidescroller physics puzzle game
+	-this sounds fun to me, but i have basically no experience with collision detection and whatnot
