@@ -59,11 +59,13 @@ struct Vec3f {
     //Output stream function, prints in the format <x, y, z>
     friend std::ostream &operator<<(std::ostream &os, const Vec3f &vec);
 
-    //dot product of two vectors
-    static float dotProd(const Vec3f &a, const Vec3f &b);
+    //Returns the dot product of two vectors
+    static float dot(const Vec3f &a, const Vec3f &b);
+    //Returns the cross product of two vectors
+    static Vec3f cross(const Vec3f &a, const Vec3f &b);
+    //Returns the angle between two vectors
+    static float angle(const Vec3f &a, const Vec3f &b);
 
-    //cross product of two vectors, returns new vector
-    static Vec3f crossProd(const Vec3f &a, const Vec3f &b);
 };
 
 #endif // VEC3F_H

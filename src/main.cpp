@@ -21,10 +21,13 @@ int main(int argc, char *argv[]) {
     std::cout << "c: " << c << std::endl;
 
     std::cout<< "a dot b" <<std::endl;
-    float dot = Vec3f::dotProd(a,b);
+    float dot = Vec3f::dot(a,b);
     std::cout<<dot<<std::endl;
 
     std::cout<< "a cross b" <<std::endl;
-    Vec3f cross = Vec3f::crossProd(a,b);
+    Vec3f cross = Vec3f::cross(a,b);
     std::cout<<cross<<std::endl;
+    a = Vec3f(1.0f, 0.0f, 0.0f);
+    b = Vec3f(0.0f, 1.0f, 0.0f);
+    std::cout << "Angle: " << Vec3f::angle(a, b) << std::endl;
 }
