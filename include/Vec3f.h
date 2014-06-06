@@ -16,6 +16,8 @@ struct Vec3f {
 
     //Returns the magnitude of the vector
     float mag() const;
+    //Returns the squared length of the vector
+    float lengthSquared() const;
     //Returns a normalized copy of the vector
     Vec3f norm() const;
     //Normalizes the vector
@@ -25,19 +27,34 @@ struct Vec3f {
     Vec3f operator+(const Vec3f &rhs) const;
     //Returns the vector difference of this vector and the RHS
     Vec3f operator-(const Vec3f &rhs) const;
-    //Returns the scaled vector of this and the RHS
-    Vec3f operator*(float rhs) const;
-    //Returns the scaled vector of this and the inverse of the RHS
-    Vec3f operator/(float rhs) const;
+    //Returns a vector that contains the products of each respective component, useful for RGB color arithmetic
+    Vec3f operator*(const Vec3f &rhs) const;
+
 
     //Adds the RHS to this vector
     void operator+=(const Vec3f &rhs);
     //Subtracts the RHS from this vector
     void operator-=(const Vec3f &rhs);
+    //Multiplies each component of this vector by the corresponding component of the RHS
+    void operator*=(const Vec3f &rhs);
     //Scales this vector by the RHS
     void operator*=(float rhs);
     //Scales this vector by the inverse of the RHS
     void operator/=(float rhs);
+
+    //Returns whether the RHS is equal to this vector
+    bool operator==(const Vec3f &rhs);
+    //Returns whether the RHS is unequal to this vector
+    bool operator!=(const Vec3f &rhs);
+
+    //Returns the scaled vector of this and the RHS
+    friend Vec3f operator*(const Vec3f &vec, float scl);
+    //Returns the scaled vector of this and the inverse of the RHS
+    friend Vec3f operator/(const Vec3f &vec, float scl);
+    //Returns the scaled vector of this and the LHS
+    friend Vec3f operator*(float scl, const Vec3f &vec);
+    //Returns the scaled vector of this and the inverse of the LHS
+    friend Vec3f operator/(float scl, const Vec3f &vec);
 
     //Output stream function, prints in the format <x, y, z>
     friend std::ostream &operator<<(std::ostream &os, const Vec3f &vec);

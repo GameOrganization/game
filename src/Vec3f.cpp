@@ -11,6 +11,10 @@ float Vec3f::mag() const {
     return sqrtf(x*x + y*y + z*z);
 }
 
+float Vec3f::lengthSquared() const {
+    return x*x + y*y + z*z;
+}
+
 Vec3f Vec3f::norm() const {
     float m = mag();
     return Vec3f(x/m, y/m, z/m);
@@ -31,12 +35,8 @@ Vec3f Vec3f::operator-(const Vec3f &rhs) const {
     return Vec3f(x - rhs.x, y - rhs.y, z - rhs.z);
 }
 
-Vec3f Vec3f::operator*(float rhs) const {
-    return Vec3f(x * rhs, y * rhs, z * rhs);
-}
-
-Vec3f Vec3f::operator/(float rhs) const {
-    return Vec3f(x / rhs, y / rhs, z / rhs);
+Vec3f Vec3f::operator*(const Vec3f &rhs) const {
+    return Vec3f(x * rhs.x, y * rhs.y, z * rhs.z);
 }
 
 void Vec3f::operator+=(const Vec3f &rhs) {
@@ -51,6 +51,12 @@ void Vec3f::operator-=(const Vec3f &rhs) {
     z -= rhs.z;
 }
 
+void Vec3f::operator*=(const Vec3f &rhs) {
+    x *= rhs.x;
+    y *= rhs.y;
+    z *= rhs.z;
+}
+
 void Vec3f::operator*=(float rhs) {
     x *= rhs;
     y *= rhs;
@@ -61,6 +67,30 @@ void Vec3f::operator/=(float rhs) {
     x /= rhs;
     y /= rhs;
     z /= rhs;
+}
+
+bool Vec3f::operator==(const Vec3f &rhs) {
+    return x == rhs.x && y == rhs.y && z == rhs.z;
+}
+
+bool operator!=(const Vec3f &rhs) {
+    return x != rhs.x || y != rhs.y || z != rhs.z;
+}
+
+Vec3f operator*(const Vec3f &vec, float scl) {
+    return Vec3f(vec.x * scl, vec.y * scl, vec.z * scl);
+}
+
+Vec3f operator/(const Vec3f &vec, float scl) {
+    return Vec3f(vec.x / scl, vec.y / scl, vec.z / scl);
+}
+
+Vec3f operator*(float scl, const Vec3f &vec) {
+    return Vec3f(vec.x * scl, vec.y * scl, vec.z * scl);
+}
+
+Vec3f operator/(float scl, const Vec3f &vec) {
+    return Vec3f(vec.x / scl, vec.y / scl, vec.z / scl);
 }
 
 std::ostream &operator<<(std::ostream &os, const Vec3f &vec) {
