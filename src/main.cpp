@@ -16,18 +16,12 @@ int main(int argc, char *argv[]) {
     Vec3f b(randFloat(), randFloat(), randFloat());
     std::cout << "a: " << a << std::endl;
     std::cout << "b: " << b << std::endl;
-    std::cout << "c = a + b" << std::endl;
-    Vec3f c = a + b;
-    std::cout << "c: " << c << std::endl;
-
-    std::cout<< "a dot b" <<std::endl;
-    float dot = Vec3f::dot(a,b);
-    std::cout<<dot<<std::endl;
-
-    std::cout<< "a cross b" <<std::endl;
-    Vec3f cross = Vec3f::cross(a,b);
-    std::cout<<cross<<std::endl;
-    a = Vec3f(1.0f, 0.0f, 0.0f);
-    b = Vec3f(0.0f, 1.0f, 0.0f);
-    std::cout << "Angle: " << Vec3f::angle(a, b) << std::endl;
+    std::cout << "Magnitude of a: " << a.mag() << std::endl;
+    std::cout << "Magnitude of b: " << b.mag() << std::endl;
+    std::cout << "Normalized a: " << a.norm() << std::endl;
+    std::cout << "Normalized b: " << b.norm() << std::endl;
+    std::cout << "a + b: " << a+b << std::endl;
+    std::cout<< "a dot b: " <<Vec3f::dot(a,b)<<std::endl;
+    std::cout<< "a cross b: " <<Vec3f::cross(a,b)<<std::endl;
+    std::cout << "Angle between " <<a<<" and "<<b<<": "<<Vec3f::angle(a, b) << std::endl;
 }
