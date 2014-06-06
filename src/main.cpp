@@ -19,7 +19,12 @@ int main(int argc, char *argv[]) {
     std::cout << "c = a + b" << std::endl;
     Vec3f c = a + b;
     std::cout << "c: " << c << std::endl;
+
+    std::cout<< "a dot b" <<std::endl;
+    float dot = Vec3f::dotProd(a,b);
+    std::cout<<dot<<std::endl;
+
+    std::cout<< "a cross b" <<std::endl;
+    Vec3f cross = Vec3f::crossProd(a,b);
+    std::cout<<cross<<std::endl;
 }
-
-
-//Kevin is a huge fucking retard, so yeah, there's that
