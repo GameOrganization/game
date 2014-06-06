@@ -73,7 +73,7 @@ bool Vec3f::operator==(const Vec3f &rhs) {
     return x == rhs.x && y == rhs.y && z == rhs.z;
 }
 
-bool operator!=(const Vec3f &rhs) {
+bool Vec3f::operator!=(const Vec3f &rhs) {
     return x != rhs.x || y != rhs.y || z != rhs.z;
 }
 
@@ -98,10 +98,14 @@ std::ostream &operator<<(std::ostream &os, const Vec3f &vec) {
     return os;
 }
 
-float Vec3f::dotProd(const Vec3f &a, const Vec3f &b){
+float Vec3f::dot(const Vec3f &a, const Vec3f &b) {
     return a.x*b.x + a.y*b.y + a.z*b.z;
 }
 
-Vec3f Vec3f::crossProd(const Vec3f &a, const Vec3f &b){
+Vec3f Vec3f::cross(const Vec3f &a, const Vec3f &b) {
     return Vec3f(a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x*b.y - a.y*b.x);
+}
+
+float Vec3f::angle(const Vec3f &a, const Vec3f &b) {
+    return acosf(dot(a, b) / a.mag() / b.mag());
 }
