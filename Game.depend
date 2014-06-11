@@ -6,11 +6,12 @@
 1402073532 c:\users\kevin\documents\github\game\include\vec3f.h
 	<iostream>
 
-1402074680 source:c:\users\mike\documents\github\game\src\main.cpp
+1402506581 source:c:\users\mike\documents\github\game\src\main.cpp
 	<iostream>
 	<stdlib.h>
 	<time.h>
 	"Vec3f.h"
+	"Vec2f.h"
 
 1402073963 c:\users\mike\documents\github\game\include\vec3f.h
 	<iostream>
@@ -37,4 +38,11 @@
 	<stdlib.h>
 	<time.h>
 	"Vec3f.h"
+
+1402506398 source:c:\users\mike\documents\github\game\src\vec2f.cpp
+	<math.h>
+	"Vec2f.h"
+
+1402506386 c:\users\mike\documents\github\game\include\vec2f.h
+	<iostream>
 

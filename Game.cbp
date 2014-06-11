@@ -33,7 +33,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Vec2f.h" />
 		<Unit filename="include/Vec3f.h" />
+		<Unit filename="src/Vec2f.cpp" />
 		<Unit filename="src/Vec3f.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
